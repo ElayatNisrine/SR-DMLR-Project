@@ -7,11 +7,12 @@ Privacy Auditing in Zero-Overlap Synthetic Cohorts" (submitted to IEEE Access).
 ## Contents
 - `sr_dmlr/scripts/` : full pipeline (feature extraction, tripartite VAE, synthesis, evaluation, audits, controls).
 - `sr_dmlr/results/` : aggregated per-seed results (JSON) and logs that produced the values of the article.
-  No source record, no individual feature, no per-participant prediction and no synthetic cohort is included.
+  No source record, no individual feature, no per-participant prediction and no complete synthetic profile is included
+  (the cohort is released as a reconstruction manifest, see below).
   The leave-one-site-out results are given as per-site AUROC (`loso_site_auroc.json`).
 - `blockaudit/` : block-wise versus full-profile membership-inference audit (`audit_blocks`, `BlockAudit.piag`).
 - `second_domain/` : PMLB replication (protocol, SHA-256 of the protocol, execution log, scripts, results).
-- `sr_dmlr/results/cohort_datasheet.json` : datasheet of the synthetic cohort (250 profiles, seed 0).
+- `sr_dmlr/cohort_manifest/` : reconstruction manifest of the synthetic cohort (250 profiles, seed 0) and its datasheet.
 - `DATASET_INSTRUCTIONS.md` : how to obtain the three source datasets.
 
 ## Environment
@@ -52,10 +53,22 @@ so no training record is copied. All SMOTE-dependent analyses were run with this
 `make_figures_30.py` and `make_fig7_loso.py`.
 
 ## Synthetic cohort
-The cohort is not redistributed, because its behavioural and contextual blocks derive from individual source records.
-It is regenerated from locally obtained sources with `python scripts/step3_export_cohort.py` (seed 0), which writes
-`cohort/sr_dmlr_synthetic_cohort.csv` and its datasheet; `cohort/` is excluded from version control. The diagnosis
-column refers to the generated clinical block only, not to the source participants.
+The released manifest (`sr_dmlr/cohort_manifest/sr_dmlr_cohort_manifest.csv`, 250 profiles, seed 0) contains, for each
+profile, the generated clinical block `z_c` (8 dimensions), the synthetic diagnosis, and the identifiers of the source
+records of the behavioural and contextual blocks (ASD Emotions image path, Engagnition participant and condition).
+The blocks `z_b` and `z_x` are derived from individual records and are not released. To rebuild the complete
+24-dimensional profiles from your own copies of the sources, from `sr_dmlr/`:
+
+```
+python scripts/step1_features.py raw
+python scripts/step22_face_features.py
+python scripts/rebuild_cohort.py   # writes cohort/sr_dmlr_synthetic_cohort_rebuilt.csv, checks the SHA-256
+```
+
+The SHA-256 digest of the complete profiles is given in `cohort_manifest/datasheet.json`; it is matched when training
+reproduces the encoder exactly, and on other hardware or library versions `z_b` and `z_x` follow the same procedure
+but not the same values. The synthetic diagnosis refers to the generated clinical block only, not to the source
+participants. The manifest is produced by `step3_export_cohort.py`.
 
 ## Second domain
 `second_domain/PLAN_second_domain.md` was fixed before data loading; `PLAN.sha256` holds its hash. The hash

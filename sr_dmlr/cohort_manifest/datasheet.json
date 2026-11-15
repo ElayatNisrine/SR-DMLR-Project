@@ -1,0 +1,43 @@
+{
+  "name": "SR-DMLR synthetic zero-overlap ASD cohort (reconstruction manifest)",
+  "created": "2026-11-15",
+  "n_profiles": 250,
+  "n_ASD": 115,
+  "n_TD": 135,
+  "space": "24-dimensional latent space of the SR-DMLR encoder (3 blocks x 8), not original features",
+  "released": "generated clinical block z_c, synthetic diagnosis, source identifiers of z_b and z_x",
+  "not_released": "z_b and z_x (derived from individual source records); rebuilt locally by rebuild_cohort.py",
+  "blocks": {
+    "z_c": "sampled from class-conditional Gaussians fitted on ABIDE-I training latents; carries the diagnosis",
+    "z_b": "latent code of one ASD Emotions image, independent of the diagnosis by construction",
+    "z_x": "latent code of one Engagnition participant, independent of the diagnosis by construction"
+  },
+  "label_warning": "synthetic_diagnosis refers to the generated clinical block only; it is not a diagnosis of the source participants identified in the provenance columns",
+  "protocol": "seed 0; ABIDE-I 70/30 split before PCA, scaling and training; 150 epochs; class-conditional Gaussian sampler",
+  "profiles_sha256": "0525910413ab67e7f633ae880173fb748ebb3cff065b48e1825e2ce97e8cca6d",
+  "rounding_decimals": 5,
+  "reproducibility": "the digest is matched when retraining reproduces the encoder exactly; on other hardware or library versions training may not be bit-identical, and z_b, z_x then follow the same procedure but not the same values",
+  "checks_this_seed": {
+    "STRT_AUROC": {
+      "LR": 0.6655295923588607,
+      "RF": 0.6495536983341861
+    },
+    "privacy_clinical_block": {
+      "MIA_AUROC": 0.4736112124972626,
+      "NND_mean": 1.1016868226350576,
+      "NND_ratio_vs_real": 1.0037389537144616
+    }
+  },
+  "intended_use": [
+    "benchmarking multimodal pipelines under controlled provenance",
+    "negative control for cross-modal diagnostic claims",
+    "privacy audits of block-wise synthetic data"
+  ],
+  "not_suitable_for": [
+    "learning links between facial or physiological variation and diagnosis",
+    "severity modelling",
+    "estimating performance on real participants",
+    "clinical conclusions"
+  ],
+  "no_formal_privacy_guarantee": true
+}

@@ -41,7 +41,8 @@ if os.environ.get("EMO", "facenet") == "facenet":
     _Xs = (_f["X"] - _f["X"].mean(0)) / (_f["X"].std(0) + 1e-8)
     class _E(dict):
         files = ["X", "emotion"]
-    E = _E(X=_PCA(64, random_state=0).fit_transform(_Xs).astype(np.float32), emotion=_f["emotion"])
+    E = _E(X=_PCA(64, random_state=0).fit_transform(_Xs).astype(np.float32), emotion=_f["emotion"],
+           files=_f["files"] if "files" in _f.files else None)
 else:
     E = np.load(FEAT / "emotion.npz", allow_pickle=True)
 G = np.load(FEAT / "engagement.npz", allow_pickle=True)
