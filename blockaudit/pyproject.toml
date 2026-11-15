@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "blockaudit"
+version = "0.2.1"
+description = "Block-wise membership-inference auditing for synthetic data assembled from blocks of different provenance"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = ["numpy", "scikit-learn"]
+license = {text = "MIT"}
+
+[tool.setuptools.packages.find]
+where = ["src"]

@@ -1,0 +1,18 @@
+# Source data and individual-level derived data: never commit
+raw/
+sr_dmlr/raw/
+features/
+sr_dmlr/features/
+cohort/
+sr_dmlr/cohort/
+loso/
+sr_dmlr/loso/
+*.npz
+*.npy
+*_synthetic_cohort.csv
+*.tsv.gz
+# Python caches
+__pycache__/
+*.pyc
+.pytest_cache/
+*.egg-info/

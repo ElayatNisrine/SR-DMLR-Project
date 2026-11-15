@@ -1,0 +1,32 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite the article below."
+title: "SR-DMLR: code and results"
+authors:
+  - family-names: "El Ayat"
+    given-names: "Nisrine"
+    affiliation: "ELITT Laboratory, ESTE, Universite Abdelmalek Essaadi, Tetouan, Morocco"
+  - family-names: "Boutalline"
+    given-names: "Mohammed"
+  - family-names: "Tannouche"
+    given-names: "Adil"
+  - family-names: "Lebbadi"
+    given-names: "Yasmine"
+  - family-names: "Ouazri"
+    given-names: "Chaimae"
+license: MIT
+preferred-citation:
+  type: article
+  title: "Source-Resolved Disentangled Multimodal Representation Learning (SR-DMLR) for Autism Research: Privacy Auditing in Zero-Overlap Synthetic Cohorts"
+  authors:
+    - family-names: "El Ayat"
+      given-names: "Nisrine"
+    - family-names: "Boutalline"
+      given-names: "Mohammed"
+    - family-names: "Tannouche"
+      given-names: "Adil"
+    - family-names: "Lebbadi"
+      given-names: "Yasmine"
+    - family-names: "Ouazri"
+      given-names: "Chaimae"
+  journal: "IEEE Access"
+  status: submitted

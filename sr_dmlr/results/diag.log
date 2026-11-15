@@ -1,0 +1,48 @@
+0 {'real_PCA64_TRTR': 0.722, 'gauss_PCA64_noVAE_N250': 0.718, 'gauss_PCA64_noVAE_N2000': 0.715, 'SR_latent_TRTR': 0.693, 'SR_gauss_N250': 0.683, 'SR_gauss_N2000': 0.694, 'Flat_latent_TRTR': 0.674, 'Flat_gauss_N250': 0.664, 'Flat_gauss_N2000': 0.671}
+1 {'real_PCA64_TRTR': 0.74, 'gauss_PCA64_noVAE_N250': 0.55, 'gauss_PCA64_noVAE_N2000': 0.721, 'SR_latent_TRTR': 0.706, 'SR_gauss_N250': 0.715, 'SR_gauss_N2000': 0.71, 'Flat_latent_TRTR': 0.692, 'Flat_gauss_N250': 0.665, 'Flat_gauss_N2000': 0.69}
+2 {'real_PCA64_TRTR': 0.752, 'gauss_PCA64_noVAE_N250': 0.673, 'gauss_PCA64_noVAE_N2000': 0.73, 'SR_latent_TRTR': 0.693, 'SR_gauss_N250': 0.699, 'SR_gauss_N2000': 0.696, 'Flat_latent_TRTR': 0.675, 'Flat_gauss_N250': 0.659, 'Flat_gauss_N2000': 0.683}
+3 {'real_PCA64_TRTR': 0.735, 'gauss_PCA64_noVAE_N250': 0.657, 'gauss_PCA64_noVAE_N2000': 0.699, 'SR_latent_TRTR': 0.721, 'SR_gauss_N250': 0.714, 'SR_gauss_N2000': 0.721, 'Flat_latent_TRTR': 0.705, 'Flat_gauss_N250': 0.705, 'Flat_gauss_N2000': 0.705}
+4 {'real_PCA64_TRTR': 0.757, 'gauss_PCA64_noVAE_N250': 0.711, 'gauss_PCA64_noVAE_N2000': 0.739, 'SR_latent_TRTR': 0.706, 'SR_gauss_N250': 0.708, 'SR_gauss_N2000': 0.706, 'Flat_latent_TRTR': 0.737, 'Flat_gauss_N250': 0.731, 'Flat_gauss_N2000': 0.737}
+5 {'real_PCA64_TRTR': 0.701, 'gauss_PCA64_noVAE_N250': 0.634, 'gauss_PCA64_noVAE_N2000': 0.697, 'SR_latent_TRTR': 0.647, 'SR_gauss_N250': 0.638, 'SR_gauss_N2000': 0.651, 'Flat_latent_TRTR': 0.654, 'Flat_gauss_N250': 0.649, 'Flat_gauss_N2000': 0.655}
+6 {'real_PCA64_TRTR': 0.728, 'gauss_PCA64_noVAE_N250': 0.629, 'gauss_PCA64_noVAE_N2000': 0.723, 'SR_latent_TRTR': 0.686, 'SR_gauss_N250': 0.688, 'SR_gauss_N2000': 0.684, 'Flat_latent_TRTR': 0.66, 'Flat_gauss_N250': 0.667, 'Flat_gauss_N2000': 0.661}
+7 {'real_PCA64_TRTR': 0.686, 'gauss_PCA64_noVAE_N250': 0.621, 'gauss_PCA64_noVAE_N2000': 0.676, 'SR_latent_TRTR': 0.656, 'SR_gauss_N250': 0.649, 'SR_gauss_N2000': 0.649, 'Flat_latent_TRTR': 0.644, 'Flat_gauss_N250': 0.631, 'Flat_gauss_N2000': 0.643}
+8 {'real_PCA64_TRTR': 0.737, 'gauss_PCA64_noVAE_N250': 0.614, 'gauss_PCA64_noVAE_N2000': 0.731, 'SR_latent_TRTR': 0.705, 'SR_gauss_N250': 0.7, 'SR_gauss_N2000': 0.7, 'Flat_latent_TRTR': 0.679, 'Flat_gauss_N250': 0.673, 'Flat_gauss_N2000': 0.692}
+9 {'real_PCA64_TRTR': 0.756, 'gauss_PCA64_noVAE_N250': 0.643, 'gauss_PCA64_noVAE_N2000': 0.734, 'SR_latent_TRTR': 0.741, 'SR_gauss_N250': 0.74, 'SR_gauss_N2000': 0.738, 'Flat_latent_TRTR': 0.701, 'Flat_gauss_N250': 0.708, 'Flat_gauss_N2000': 0.707}
+{
+ "real_PCA64_TRTR": [
+  0.7314,
+  0.0232
+ ],
+ "gauss_PCA64_noVAE_N250": [
+  0.645,
+  0.049
+ ],
+ "gauss_PCA64_noVAE_N2000": [
+  0.7164,
+  0.02
+ ],
+ "SR_latent_TRTR": [
+  0.6954,
+  0.0278
+ ],
+ "SR_gauss_N250": [
+  0.6933,
+  0.0308
+ ],
+ "SR_gauss_N2000": [
+  0.695,
+  0.0281
+ ],
+ "Flat_latent_TRTR": [
+  0.6821,
+  0.0276
+ ],
+ "Flat_gauss_N250": [
+  0.6752,
+  0.0304
+ ],
+ "Flat_gauss_N2000": [
+  0.6843,
+  0.0282
+ ]
+}

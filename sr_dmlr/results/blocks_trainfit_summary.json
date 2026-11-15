@@ -1,0 +1,144 @@
+{
+ "n_test": {
+  "diagnosis": 266,
+  "emotion": 400,
+  "condition_HPE_vs_LPE": 12,
+  "condition_3class": 18
+ },
+ "diagnosis": {
+  "all": 0.684,
+  "z_c only": 0.689,
+  "z_b only": 0.488,
+  "z_x only": 0.494,
+  "without z_c": 0.49,
+  "without z_b": 0.686,
+  "without z_x": 0.688,
+  "ref": 0.723,
+  "without z_c_drop": [
+   0.194,
+   [
+    0.176,
+    0.211
+   ]
+  ],
+  "without z_b_drop": [
+   -0.002,
+   [
+    -0.004,
+    0.001
+   ]
+  ],
+  "without z_x_drop": [
+   -0.004,
+   [
+    -0.008,
+    0.0
+   ]
+  ],
+  "without z_c_pholm": 2.2e-08,
+  "without z_b_pholm": 1.0,
+  "without z_x_pholm": 0.71
+ },
+ "emotion": {
+  "all": 0.541,
+  "z_c only": 0.5,
+  "z_b only": 0.583,
+  "z_x only": 0.501,
+  "without z_c": 0.546,
+  "without z_b": 0.5,
+  "without z_x": 0.567,
+  "ref": 0.823,
+  "without z_c_drop": [
+   -0.005,
+   [
+    -0.009,
+    -0.001
+   ]
+  ],
+  "without z_b_drop": [
+   0.041,
+   [
+    0.034,
+    0.048
+   ]
+  ],
+  "without z_x_drop": [
+   -0.026,
+   [
+    -0.033,
+    -0.019
+   ]
+  ],
+  "without z_c_pholm": 0.18,
+  "without z_b_pholm": 2.2e-08,
+  "without z_x_pholm": 9e-06
+ },
+ "condition_HPE_vs_LPE": {
+  "all": 0.848,
+  "z_c only": 0.534,
+  "z_b only": 0.41,
+  "z_x only": 0.844,
+  "without z_c": 0.848,
+  "without z_b": 0.853,
+  "without z_x": 0.453,
+  "ref": 0.922,
+  "without z_c_drop": [
+   -0.0,
+   [
+    -0.012,
+    0.012
+   ]
+  ],
+  "without z_b_drop": [
+   -0.005,
+   [
+    -0.018,
+    0.006
+   ]
+  ],
+  "without z_x_drop": [
+   0.395,
+   [
+    0.319,
+    0.471
+   ]
+  ],
+  "without z_c_pholm": 1.0,
+  "without z_b_pholm": 1.0,
+  "without z_x_pholm": 1.5e-05
+ },
+ "condition_3class": {
+  "all": 0.852,
+  "z_c only": 0.451,
+  "z_b only": 0.46,
+  "z_x only": 0.861,
+  "without z_c": 0.86,
+  "without z_b": 0.852,
+  "without z_x": 0.444,
+  "ref": 0.963,
+  "without z_c_drop": [
+   -0.008,
+   [
+    -0.016,
+    0.0
+   ]
+  ],
+  "without z_b_drop": [
+   -0.001,
+   [
+    -0.006,
+    0.006
+   ]
+  ],
+  "without z_x_drop": [
+   0.408,
+   [
+    0.354,
+    0.461
+   ]
+  ],
+  "without z_c_pholm": 0.24,
+  "without z_b_pholm": 1.0,
+  "without z_x_pholm": 2.2e-08
+ }
+}
